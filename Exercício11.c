@@ -11,7 +11,7 @@ scanf("%f", &M);
 float K;
 K= M*3.6;
 
-printf("\nA velocidade digitada convertida em kilometros por hora eh: %f", K);
+printf("\nA velocidade digitada convertida em quilometros por hora eh: %f", K);
 printf("\n");
 system("pause");
 
