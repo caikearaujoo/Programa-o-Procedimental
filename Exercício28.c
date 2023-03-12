@@ -15,7 +15,7 @@ scanf("%f",&n3);
 float R;
 R=(n1*n1)+(n2*n2)+(n3*n3);
 
-printf("\nA soma dos quadrados dos numeros digitados eh: %f", R);
+printf("\nA soma dos quadrados dos valores digitados eh: %f", R);
 printf("\n");
 system("pause");
 
