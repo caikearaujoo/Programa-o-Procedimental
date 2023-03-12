@@ -11,7 +11,7 @@ scanf("%f", &M);
 float A;
 A=M*0.000247;
 
-printf("\nA distancia digitada em acres eh: %f", A);
+printf("\nA area digitada em acres eh: %f", A);
 printf("\n");
 system("pause");
 
