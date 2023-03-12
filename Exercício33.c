@@ -1,16 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main () {
-int l;
+float l;
 
 l=0;
 
 printf("\nDigite o comprimento do lado de um quadrado:");
-scanf("%d",&l);
+scanf("%f",&l);
 
-int A= (l*l);
+float A= (l*l);
 
-printf("\nA área do quadrado eh: %d metros quadrados",A);
+printf("\nA área do quadrado eh: %f metros quadrados",A);
 printf("\n");
 system("pause");
 
