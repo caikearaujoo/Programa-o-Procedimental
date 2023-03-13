@@ -4,7 +4,7 @@ int main () {
 
 int n1, d1, d2, d3, d4;
 
-printf("\nInsira um numero de 4digitos:");
+printf("\nInsira um numero de 4 digitos:");
 printf("\n");
 scanf("%d",&n1);
 
