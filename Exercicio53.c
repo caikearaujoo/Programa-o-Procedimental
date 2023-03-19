@@ -11,7 +11,7 @@ int main() {
     
     custo = 2 * (c + l) * p;
 
-    printf("O custo para cercar o terreno com tela sera de R$ %.2f\n", c);
+    printf("O custo para cercar o terreno com tela sera de R$ %f.\n", custo);
     
     return 0;
 }
