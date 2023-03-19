@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 int main() {
     float investimento1, investimento2, investimento3, premio, total_investido, ganho1, ganho2, ganho3;
     
