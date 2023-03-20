@@ -1,21 +1,26 @@
 #include <stdio.h>
-int main() {
-    int hora_inicio, min_inicio, seg_inicio, duracao, hora_fim, min_fim, seg_fim;
-    
-    printf("Digite o horario de inicio (hh:mm:ss): ");
-    scanf("%d:%d:%d", &hora_inicio, &min_inicio, &seg_inicio);
-    
-    printf("Digite a duracao da experiencia em segundos: ");
+#include <stdlib.h>
+
+int main()
+{
+    int h1, m1, s1, h2, m2, s2, h3, m3, s3, duracao, tempo, resto;
+
+    printf("Digite, nessa ordem, em que horas, em que minutos e em que segundos o experimento comecou:\n");
+    scanf("%d %d %d", &h1, &m1, &s1);
+
+    printf("Digite a duracao do experimento, em segundos:\n");
     scanf("%d", &duracao);
+
+    tempo=duracao%3600; 
+    h2=duracao/3600; 
+    m2=tempo/60; 
+    s2=tempo%60; 
+
+    s3=(s2+s1)%60; 
+    m3=(m2+m1+(s2+s1)/60)%60;
     
-    seg_fim = seg_inicio + duracao;
-    min_fim = min_inicio + seg_fim / 60;
-    seg_fim = seg_fim % 60;
-    hora_fim = hora_inicio + min_fim / 60;
-    min_fim = min_fim % 60;
-    hora_fim = hora_fim % 24;
-    
-    printf("O horario de termino e: %02d:%02d:%02d\n", hora_fim, min_fim, seg_fim);
-    
+    h3=(h2+h1+(m2+m1+(s2+s1)/60)/60)%24;
+
+    printf("Esse experimento acabou %d(h):%d(min):%d(s), %d dia(s) depois", h3, m3, s3, (h2+h1+(m2+m1+(s2+s1)/60)/60)/24);
     return 0;
 }
