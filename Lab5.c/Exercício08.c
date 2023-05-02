@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int numeros[10];
     int i, j, eh_repetido;
     printf("Digite 10 numeros diferentes:\n");
