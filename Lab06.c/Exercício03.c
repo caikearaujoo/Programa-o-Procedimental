@@ -12,7 +12,7 @@ int main ()
 {
     informacoes a[5];
     int i;
-    for (i=0; i<1; i++)
+    for (i=0; i<5; i++)
     {
         printf("\nDigite o nome do aluno: ");
         fgets (a[i].nome, 100, stdin);
@@ -21,7 +21,7 @@ int main ()
         printf ("\nDigite seu curso: ");
         fgets (a[i].curso, 100, stdin);
     }
-    for (i=0; i<1; i++)
+    for (i=0; i<5; i++)
     {
         printf("\nInformacoes do aluno %d: \n%s%s%s", i+1, a[i].nome, a[i].matricula, a[i].curso);
     }
