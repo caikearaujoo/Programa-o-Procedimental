@@ -7,11 +7,11 @@ int main ()
     int *pn3 = &n3;
 
     printf("\nDigite o valor do inteiro: ");
-    scanf("%d", &n1);
+    scanf("%d", &(*pn1));
     printf("\nDigite o valor do outro inteiro: ");
-    scanf("%d", &n2);
+    scanf("%d", &(*pn2));
     printf("\nDigite o valor do outro inteiro: ");
-    scanf("%d", &n3);
+    scanf("%d", &(*pn3));
 
       if (n1>n2>n3)
       {
