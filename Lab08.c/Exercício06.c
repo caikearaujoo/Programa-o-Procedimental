@@ -6,9 +6,9 @@ int main ()
     int *pn2 = &B;
 
     printf("\nDigite o valor do inteiro: ");
-    scanf("%d", &B);
+    scanf("%d", & (*pn1));
     printf("\nDigite o valor do outro inteiro: ");
-    scanf("%d", &A);
+    scanf("%d", & (*pn2));
 
     int soma = (*pn1) + (*pn2);
     int subtracao = (*pn1) - (*pn2);
