@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void encontrarMaior(int *array, int tamanho, int *maior);
+void encontrarmaior(int *array, int tamanho, int *maior);
 
-void imprimirArray(int *array, int tamanho, int k);
+void imprimirmrray(int *array, int tamanho, int k);
 
 int main() 
 {
@@ -19,7 +19,7 @@ int main()
 
     if (array == NULL) {
         printf("Erro de memoria insuficiente.\n");
-        return 1;
+        exit (1);
     }
 
     printf("Digite os valores do array:\n");
@@ -29,18 +29,16 @@ int main()
     }
 
     printf("Array:\n");
-    imprimirArray(array, N, k);
+    imprimirarray(array, N, k);
 
     int maior;
-    encontrarMaior(array, N, &maior);
+    encontrarmaior(array, N, &maior);
     printf("Maior elemento: %d\n", maior);
-
-    free(array);
 
     return 0;
 }
 
-void encontrarMaior(int *array, int tamanho, int *maior) 
+void encontrarmaior(int *array, int tamanho, int *maior) 
 {
     *maior = array[0];
 
@@ -53,7 +51,7 @@ void encontrarMaior(int *array, int tamanho, int *maior)
     }
 }
 
-void imprimirArray(int *array, int tamanho, int k) 
+void imprimirarray(int *array, int tamanho, int k) 
 {
     for (int i = 0; i < tamanho; i++) 
     {
