@@ -22,7 +22,7 @@ int main()
     }
     printf("]");
     
-    free (*p);
+    free (p);
 
     return 0;
 }
