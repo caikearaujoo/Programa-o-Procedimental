@@ -15,10 +15,10 @@ int main()
     int num_alunos;
     int i;
 
-    printf("Digite o número de alunos: ");
+    printf("Digite o numero de alunos: ");
     scanf("%d", &num_alunos);
 
-    aluno *alunos = (aluno *) malloc(num_alunos * sizeof(aluno));
+    alunos = (aluno *) malloc(num_alunos * sizeof(aluno));
     for (i = 0; i < num_alunos; i++) 
     {
         printf("Aluno %d:\n", i+1);
