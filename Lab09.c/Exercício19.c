@@ -8,8 +8,7 @@
 int main() {
     char matriz[MAX_NAMES][MAX_NAME_LENGTH];
     int i;
-    
-    // Inicializar a matriz com nomes vazios
+
     for (i = 0; i < MAX_NAMES; i++) {
         matriz[i][0] = '\0';
     }
