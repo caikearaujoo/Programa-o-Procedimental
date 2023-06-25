@@ -20,11 +20,11 @@ int main ()
     }
     printf("\n%s", p1);
 
-    for (int i = 0; p1[i] != '\0'; i++)
+    for (int i = 0; *(p1+i) != '\0'; i++)
     {
-        if(p1[i] >= 'a' && p1[i] <= 'z')
+        if( *(p1+i) >= 'a' && *(p1+i) <= 'z')
         {
-            p1[i] -= 32;
+            *(p1+i) -= 32;
         }
     }
     printf ("\n%s", p1);
