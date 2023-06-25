@@ -37,7 +37,7 @@ int main() {
             break;
         }
 
-        fprintf(fp, "%s:%s\n", nomes, telefones);
+        fprintf(fp, "%s: %s\n", nomes, telefones);
     }
 
     fclose(fp);
