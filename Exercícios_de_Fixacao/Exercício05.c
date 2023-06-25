@@ -1,32 +1,39 @@
 #include <stdio.h>
-#include <stdlib.h> //exit
+#include <time.h>
+#include <stdlib.h>
+
 int main ()
 {
-    int **p1 = NULL, linhas, colunas, i, j;
+    int **p, linhas, colunas, i, j;
+    printf("\nDigite as linhas da matriz desejada: ");
+    scanf ("%d", &linhas);
+    printf("\nDigite as linhas da matriz desejada: ");
+    scanf ("%d", &colunas);
 
-    printf("\nDigite as dimensoes da matriz desejada: ");
-    scanf("%d %d", &linhas, &colunas);
-
-    p1 = (int**) malloc (linhas * sizeof(int));
-
-    for (i = 0; i < colunas; i++)
-    {
-        p1 [i] = (int*) malloc (colunas * sizeof(int));
-        for (j=0; j<colunas; j++)
-        {
-            printf("\nDigite os valores da posicao [%d][%d] da matriz: ", i, j);
-            scanf("%d", &p1[i][j]);
-        }
-    }
-
+    srand(time (NULL));
+    p = (int**) calloc (linhas, sizeof(int*));
+    
     for (i = 0; i < linhas; i++)
     {
-        for (j = 0; j < colunas; j++)
+        p[i] = (int*) calloc (linhas, sizeof(int));
+        for (j = 0; j< colunas; j++)
         {
-            printf(" %d ", p1[i][j]);
+            p[i][j] = rand() % 100;
+        }
+    }
+    for (i=0; i<linhas; i++)
+    {
+        for (j=0; j<colunas; j++)
+        {
+            printf(" %d ", p[i][j]);
         }
         printf("\n");
     }
-    free (p1);
+
+    for (i=0; i<colunas; i++)
+    {
+        free(p[i]);
+    }
+    free(p);
     return 0;
 }
