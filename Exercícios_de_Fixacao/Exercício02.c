@@ -2,32 +2,33 @@
 #include <string.h>
 int main ()
 {
-    char nome[30];
-    char *p1 = NULL;
-    p1 = nome; 
+    char nome [100];
+    int i;
 
-    printf("\nDigite seu nome completo: ");
-    setbuf(stdin, NULL);
-    fgets(p1, 30, stdin);
-    p1[strcspn(p1, "\n")] = '\0';
+    printf("\nDigite um nome completo: ");
+    setbuf(stdin,NULL);
+    fgets(nome, 100, stdin);
+    nome[strcspn(nome, "\n")] = '\0';
 
-    for (int i = 0; p1[i] != '\0'; i++)
+    for (i=0; *(nome+i) != '\0'; i++)
     {
-        if(p1[i] >= 'A' && p1[i] <= 'Z')
+        if (*(nome+i) >= 'A' && *(nome+i) <= 'Z')
         {
-            p1[i] += 32;
+            *(nome+i) += 32;
         }
     }
-    printf("\n%s", p1);
 
-    for (int i = 0; *(p1+i) != '\0'; i++)
+    printf("\n%s", nome);
+
+    for (i=0; *(nome+i) != '\0'; i++)
     {
-        if( *(p1+i) >= 'a' && *(p1+i) <= 'z')
+        if (*(nome+i) >= 'a' && *(nome+i) <= 'z')
         {
-            *(p1+i) -= 32;
+            *(nome+i) -= 32;
         }
     }
-    printf ("\n%s", p1);
+
+    printf("\n%s", nome);
 
     return 0;
 }
