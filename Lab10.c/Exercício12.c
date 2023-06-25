@@ -33,7 +33,7 @@ int main ()
         {
             k++;
         }
-        if (caractere> 'a' && caractere < 'z' || caractere > 'A' && caractere > 'Z' )
+        if (caractere >= 'a' && caractere <= 'z' || caractere >= 'A' && caractere >= 'Z' )
         {
             w++;
         }
